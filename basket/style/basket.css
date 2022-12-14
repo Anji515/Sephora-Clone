@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid ; */
+    width: 75%;
+    margin: auto;
+}
+.container>h2{
+    margin-left: 20px;
+}
+.main{
+    display: flex;
+    /* border: 1px solid; */
+    padding: 10px;
+}
+/*-----------------------------------left----------------------------------------*/
+/* ========= save 25% ========== */
+.box1-1{
+    border:1px solid rgb(184, 183, 183);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 700px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+}
+#save{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#save>p{
+    font-size: 14px;
+}
+.card>img{
+    width: 60px;
+    margin-right: 10px;
+}
+#saveBtn>button:hover{
+    cursor: pointer;
+    color: gray;
+    border-color: gray;
+}
+#saveBtn>button{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    padding: 2px;
+    margin: 10px;
+    font: weight 15px;;
+    background-color: white;
+}
+/* ========= Get It Shipped ========== */
+.box2-0{
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+}
+.box1-2{
+    background-color: rgb(233, 231, 231);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 700px;
+}
+.box1-2-1{
+    display: flex;
+}
+.box1-2-1>img{
+    width: 60px;
+    margin-right: 10px;
+}
+.box1-2-2{
+    text-align: center;
+}
+.box1-2-2>p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.box1-2-2>button:hover{
+    transition: 0.1s;
+    cursor: pointer;
+    background-color: gray;
+    border-color: gray;
+}
+.box1-2-2>button{
+    width: 180px;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+}
+/* ---------------------------------------------right------------------------------------ */
+/* ========= Total ========== */
+#merchTotal{
+    display: flex;
+    justify-content: space-between;
+}
+#shipHand{
+    display: flex;
+    justify-content: space-between;
+}
+#estTax{
+    display: flex;
+    justify-content: space-between;
+}
+#estTotal{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.box2-1{
+    border: 1px solid rgb(175, 173, 173);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+}
+.box2-1>hr{
+    margin-top: 10px;
+}
+.paybtns>button:nth-child(1):hover{
+    transition: 0.1s;
+    cursor: pointer;
+    background-color: red;
+}
+.paybtns>button:nth-child(1){
+    background-color: rgb(204, 4, 4);
+    color: white;
+    border: none;
+    margin-bottom: 8px;
+}
+#paypalBtn:hover{
+    transition: 0.1s;
+    cursor: pointer;
+    color: gray;
+    border-color: gray;
+}
+#paypalBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.paybtns>button{
+    width: 100%;
+    height: 45px;
+    border-radius: 20px;
+}
+.paybtns>button>img{
+    height: 20px;
+}
+.box2-2{
+    border: 1px solid rgb(187, 186, 186);
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+/* ========= Promo ========== */
+.promo{
+    display: flex;
+    flex-direction: column;
+}
+.promo>a{
+    margin-bottom: 5px;
+}
+.promo>input{
+    height: 35px;
+    border-radius: 5px;
+}
+/* ========= Need assistance ========== */
+.box2-3{
+    border: 1px solid rgb(198, 195, 195);
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+}
+.box2-3>h4{margin-bottom: 10px;}
+.box2-3>p{margin-bottom: 10px;}
+#cardsLogo{
+    display: flex;
+}
+#cardsLogo>img{
+    width: 45px;
+    margin-right: 4px;
+}
