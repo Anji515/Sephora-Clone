@@ -3,18 +3,27 @@
     margin: 0;
     padding: 0;
 }
+body{
+    margin: 0;
+    padding: 0;
+}
 #login-wrapper{
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("https://images.unsplash.com/photo-1597225244660-1cd128c64284?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .form-wrapper{
-    background-color: red;
+    background: linear-gradient(rgb(250, 233, 233),#ffbfc8,#d4a8ae);
     width: 350px;
     height: 480px;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
 }
 #is-on{
     display: none;
@@ -29,10 +38,12 @@
     justify-content: center;
     display: flex;
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(127, 103, 107);;
     margin: 60px;
     transition: 0.5s ease-in-out;
     cursor: pointer;
     text-align: center;
+    
 }
 .signup-wrapper>form>*{
     display: block;
@@ -47,6 +58,7 @@ input{
     align-items: center;
     justify-content: center;
     border: none;
+    border-bottom: 2px solid rgb(81, 62, 65);
     border-radius: 5px;
     padding:5px 10px;
     font-size: 16px;
@@ -58,10 +70,17 @@ select{
     padding: 5px;
     outline: none;
     border: none;
+    border-bottom: 2px solid rgb(81, 62, 65);
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+.signup-wrapper .toggle-label{
+    color:  rgb(0, 0, 0);
+}
+.login-wrapper .toggle-label{
+    color: #000000;
 }
 input[type="submit"]{
     width: 35%;
@@ -70,7 +89,7 @@ input[type="submit"]{
 }
 .login-wrapper{
     height: 460px;
-    background-color: rgb(127, 127, 127);
+    background-color:#ffbfc8;
     border-radius: 60% / 10%;
     transform: translateY(-180px);
     transition: 0.2s ease-in-out;
