@@ -1,0 +1,90 @@
+#login-wrapper>*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#login-wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-wrapper{
+    background-color: red;
+    width: 350px;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+#is-on{
+    display: none;
+}
+.signup-wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.toggle-label{
+    font-size: 2.3rem;
+    justify-content: center;
+    display: flex;
+    font-weight: bold;
+    margin: 60px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+.signup-wrapper>form>*{
+    display: block;
+}
+input{
+    box-sizing: border-box;
+    margin:15px auto;
+    margin-bottom: 16px;
+    width: 75%;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    padding:5px 10px;
+    font-size: 16px;
+}
+select{
+    margin:auto;
+    border-radius: 5px;
+    width: 35%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+input[type="submit"]{
+    width: 35%;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.login-wrapper{
+    height: 460px;
+    background-color: rgb(127, 127, 127);
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: 0.2s ease-in-out;
+
+}
+.login-wrapper .toggle-label{
+    transform: scale(0.6);
+}
+#is-on:checked ~ .login-wrapper{
+    transform: translateY(-500px);
+}
+#is-on:checked ~ .signup-wrapper .toggle-label{
+    transform: scale(0.6);
+}
+#is-on:checked ~ .login-wrapper .toggle-label{
+    transform: scale(1);
+}
