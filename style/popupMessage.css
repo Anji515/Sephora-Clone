@@ -7,7 +7,7 @@
     left: 50%;
     background-color: white;
     justify-self: center;
-    border: 2px solid rgb(186, 186, 186);
+    border: 1px solid rgb(199, 199, 199);
     border-left: none;
     max-width:300px;
     display: flex;
@@ -36,7 +36,7 @@
     padding-left: 10px;
     padding-right: 10px;
     font-size: 16px;
-    color: gray;
+    color: rgb(72, 72, 72);
 }
 
 .none{
