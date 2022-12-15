@@ -49,8 +49,6 @@ async function checkUser(obj,type){
         }else{
             showmessage(`${text} already exists!`,"red","fa-xmark")
         }
-        
-    
     
     }catch(error){
         showmessage("Oops!something went wrong","red","fa-xmark")
