@@ -1,5 +1,5 @@
 import { showmessage } from "../script/popupMessage.js";
-// showmessage("Done","red","fa-arrow-right")
+
 
 let insert = document.querySelector("#insertbtn")
 let deletebtn = document.querySelector("#deletebtn")
@@ -135,6 +135,6 @@ function renderData(data){
       </div>
         `
     }).join(" ")
-    //console.log(newData)
+    
     adminproduct.innerHTML=newData
 }
