@@ -1,0 +1,79 @@
+body{
+    margin: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* OFFER BAR */
+#offer{
+    color: white;
+    background-color: #4f0f6d;
+    font-size: 11px;
+    text-align: center;
+    padding:8px 0px 8px 0px;
+    letter-spacing: 0.3px;
+}
+#offer:hover{
+    text-decoration: underline;
+}
+/* SEARCH BAR */
+#search{
+    /* border: 1px solid; */
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+#logo{
+    width:10%;
+    height: 8%;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* padding-top: 8px; */
+    margin-left: 2pc;
+}
+#content{
+    /* border: 1px solid; */
+    display: flex;
+    width: 85%;
+    /* justify-content:space-around; */
+    gap: 15px;
+    align-items: center;
+}
+.store{
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-evenly;
+    font-size:12px;
+    width: 15%;
+}
+#comm{
+    /* border: 1px solid; */
+    display: flex;
+    width: 16%;
+    justify-content: space-around;
+}
+#sigin{
+    font-weight: bold;
+    width: 10%;
+}
+#sigin img{
+width:35%
+}
+#comm>img{
+    width: 18%;
+}
+.store img{
+    /* border: 2px solid firebrick; */
+    width:23.5%
+}
+input[type="search"]{
+border-radius: 20px;
+padding: 0.8pc 15pc 0.8pc 0.7pc;
+font-size: 16px;
+border: none;
+margin-left: 2pc;
+background-color: rgb(243, 244, 245);
+}
+/* CATEGORY */
+/* https://www.sephora.com/img/ufe/bg-gifts-left.png */
+/* https://www.sephora.com/img/ufe/bg-gifts-right.png */
+  
+
