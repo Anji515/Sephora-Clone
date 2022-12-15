@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style\payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="icon" href="basket-images\Cosmetic.png">
+    <title>Checkout | COSMO</title>
+</head>
+<body>
+    <div class="head">COSMO</div>
+    <div class="main">
+<!---------------------------------------- column 1 ------------------------------------------>
+        <div class="column1">
+            <h1>Checkout</h1>
+            <hr>
+<!-- ========= Shipping Address ========== -->
+            <div class="column1-1">
+                <div class="shipAdd">
+                    <h3>Shipping Address</h3>
+                    <p></p>
+                </div>
+                <div><a href="#">Edit</a></div>
+            </div>
+            <hr>
+<!-- ========= Delivery & Gift Options ========== -->
+            <div class="column1-2">
+                <div class="delivGift">
+                    <h3>Delivery & Gift Options</h3>
+                    <h6></h6>
+                    <p></p>
+                </div>
+                <div><a href="#">Edit</a></div>
+            </div>
+            <hr>
+<!-- ========= Payment Method ========== -->
+            <div class="column1-3">
+                <div class="payMethod">
+                    <div id="pm">
+                        <h3>Payment Method</h3>
+                    </div>
+                    <div id="secured">
+                        <i class="fa-solid fa-lock"></i>
+                        <p>Secured</p>
+                    </div>
+                </div>
+                <div class="check">
+                    <input type="checkbox" class="checkbox">
+                    <img src="basket-images\payPal.jpg" alt="">
+                    <p>Pay with PayPal</p>
+                </div>
+                <hr>
+                <div class="check">
+                    <i class="fa-solid fa-plus"></i>
+                    <img src="basket-images\debit.png" alt="">
+                    <a href="#">Add new credit or debit card</a>
+                </div>
+<!-- ========= Gift card ========== -->
+                <div id="giftCard">
+                    <div>
+                        <h3>Gift card</h3>
+                    </div>
+                    <div id="inpBtn">
+                        <input id="gcn" type="number" placeholder="  Gift card number*">
+                        <input id="pin" type="number" placeholder="  PIN*">
+                        <button>Apply</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="column1-4">
+                <h2>Review & Place Order</h2>
+                <p>Please review your order information before placing your order.</p>
+            </div>
+        </div>
+<!---------------------------------------- column 2 ------------------------------------------>
+
+        <div class="column2">
+            <div class="column2-1">
+                <div id="merchTotal">
+                    <p>Merchandise Subtotal</p>
+                    <h4>$0.00</h4>
+                </div>
+                <div id="shipHand">
+                    <p>Shipping & Handling</p>
+                    <h4>TBD</h4>
+                </div>
+                <div id="estTax">
+                    <p>Estimated Tax & Other Fees</p>
+                    <h4>TBD</h4>
+                </div>
+                <hr>
+                <div id="estTotal">
+                    <h4>Estimated Total</h4>
+                    <h4>$0.00</h4>
+                </div>
+                <hr>
+            </div>
+            <div class="column2-2">
+                <h4>The Sephora Credit Card Program</h4>
+                <div id="save25">
+                    <img src="basket-images/card.jpg" alt="">
+                    <p>Save 25% on this order when you <br> open and use either Cosmo <br> Credit Card today*</p>
+                </div>
+                <p>*Subject to credit approval. Exclusions apply.</p>
+                <button id="see">SEE DETAILS</button>
+                <hr>
+                <button id="place">Place Order</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.head{
+    height: 100px;
+    display: flex;
+    margin: auto;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/* -----------------------------------------------column 1----------------------------- */
+.column1{
+    width: 40%;
+}
+.column1>h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* =================== Shipping Address ================ */
+.column1-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+/* =================== Delivery & Gift Options ================ */
+.column1-2{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.shipAdd>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.column1-2{
+    display: flex;
+}
+.delivGift>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* =================== Payment Method ================ */
+.column1-3>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.payMethod{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#pm>h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#secured{
+    display: flex;
+}
+.check{
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.check>img{
+    width: 50px;
+}
+.checkbox{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+/* =================== Gift card ================ */
+#giftCard{
+    padding: 10px;
+}
+#gcn{
+    height: 36px;
+    width: 250px;
+    border-radius: 5px;
+}
+#pin{
+    height: 36px;
+    width: 110px;
+    border-radius: 5px;
+}
+#inpBtn>button:hover{
+    cursor: pointer;
+    color: gray;
+    border-color: gray;
+}
+#inpBtn>button{
+    height: 36px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: white;
+}
+.column1-4{
+    padding: 10px;
+}
+.column1-4>h2{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+/* -----------------------------------------------column 2----------------------------- */
+.column2{
+    width: 22%;
+    border: 1px solid grey;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+#merchTotal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#shipHand{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#estTax{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#estTotal{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.column2-2>h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#save25{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.column2-2>p{
+    margin-bottom: 10px;
+}
+#save25{
+    display: flex;
+}
+#see:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    color: grey;
+    border-color: grey;
+}
+#see{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+#place:hover{
+    cursor: pointer;
+    transition: 0.1s;
+    color: rgb(218, 216, 216);
+    background-color: red;
+}
+#place{
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: white;
+    border: none;
+    background-color: rgb(231, 7, 7);
+}
