@@ -1,3 +1,6 @@
+import { showmessage } from "../script/popupMessage.js";
+// showmessage("Done","red","fa-arrow-right")
+
 let insert = document.querySelector("#insertbtn")
 let deletebtn = document.querySelector("#deletebtn")
 let dlt = document.querySelector("#dltn")
@@ -71,12 +74,13 @@ async function postProducts(obj){
         body:JSON.stringify(obj)
        })
        if(res.ok){
-        alert('Product Added Sucessfully')
+        showmessage("Product Added Sucessfully","green","fa-check")
        }else{
-        alert('Error While Adding Products')
+        
+        showmessage("Unable to add Product","red","fa-xmark")
        }
    } catch (error) {
-    alert('Error While Adding Products')
+    showmessage("Unable to add Product","red","fa-xmark")
    } 
    
 }
@@ -97,12 +101,12 @@ async function deleteRequest(id){
             }
         })
         if(res.ok){
-            alert("Product Removed")
+            showmessage("Product removed Sucessfully","green","fa-check")
         }else{
-            alert('Unable to delete products')
+            showmessage("Unable to delete products","red","fa-xmark") 
         }
     } catch (error) {
-        alert('Unable to delete products')
+        showmessage("Unable to delete products","red","fa-xmark")
     }
 }
 
