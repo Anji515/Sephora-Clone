@@ -1,3 +1,7 @@
+import {nav} from '../component/nav.js';
+let navbar=document.getElementById('newNav');
+navbar.innerHTML=nav();
+
 const newCards=document.getElementById('newCards');
 
 // Fetch from API
