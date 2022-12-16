@@ -1,0 +1,48 @@
+#brandsTop{
+    width:90%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+.Alfabets{
+   font-family: "helvetica neue", helvetica, arial, sans-serif;
+   font-size: 20px;
+}
+
+
+#brandsData{
+    padding-left: 20%;
+    padding-right: 20%;
+    /* color: rgb(75, 134, 243); */
+}
+.alfaBet{
+    border-bottom: 1px solid #bbc1cc;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    line-height: 5px;
+    gap:12px;
+    font-size: 14px;
+    font-family: "helvetica neue", helvetica, arial, sans-serif;;
+}
+
+@media all and (min-width:860px) and (max-width:1280px){
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (min-width:450px) and (max-width:859px){
+    .cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.alfaBet p{
+    font-size: 35px;
+    color: #12284c;
+}
