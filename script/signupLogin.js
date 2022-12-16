@@ -107,6 +107,7 @@ async function loginUser(obj,type){
                 },100)
             }else{
                 showmessage(`Welcome ${obj.username} to the admin page!`,"green","fa-check");
+                sessionStorage.setItem("loggedin-adminid",user_data_loggedin.id);
                 setTimeout(()=>{
                     window.location.href=admin_redirect_link;
                 },100)
