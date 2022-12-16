@@ -1,6 +1,6 @@
-// import nav from './component/nav.js';
-// let navbar=document.getElementById('navbar');
-// navbar.innerHTML=nav();
+import {nav} from '../component/nav.js'
+let navbar=document.getElementById('navbar_reusable');
+navbar.innerHTML=nav();
 // CAROUSEL 
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -75,7 +75,7 @@ let ChooseArr = [
 render_choose_products(ChooseArr);
 function render_choose_products(arr){
     arr.forEach(el => {
-        console.log(el);
+        // console.log(el);
         let main_div = document.createElement('div');
         let img = document.createElement('img');
         img.src = el.img;
@@ -144,7 +144,7 @@ let justArr = [
 render_choose_justDropped(justArr);
 function render_choose_justDropped(arr){
     arr.forEach(el => {
-        console.log(el);
+        // console.log(el);
         let main_div = document.createElement('div');
         let img = document.createElement('img');
         img.src = el.img;
@@ -207,7 +207,7 @@ let beautyArr= [
 render_choose_beautyOffer(beautyArr);
 function render_choose_beautyOffer(arr){
     arr.forEach(el => {
-        console.log(el);
+        // console.log(el);
         let main_div = document.createElement('div');
         let img = document.createElement('img');
         img.src = el.img;
