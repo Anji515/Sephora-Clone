@@ -1,15 +1,19 @@
+import {nav} from '../component/nav.js';
+let navbar=document.getElementById('newNav');
+navbar.innerHTML=nav();
+
 const newCards=document.getElementById('newCards');
 
-
+// Fetch from API
 async function getNewPro(){
 
-    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?_limit=10`);
+    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=25`);
     let data=await res.json();
     renderData(data);
     renderSort(data);
 }
-
 getNewPro()
+
 
 
 let cartArr=JSON.parse(localStorage.getItem('cartList')) || [];
@@ -34,8 +38,6 @@ function renderData(data){
              <button class='newCart' data-id=${el.id}>Add To Cart</button>
            </div>
          </div>`
-
-         
     });
 
        // AddTo cart event

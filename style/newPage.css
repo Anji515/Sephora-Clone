@@ -31,7 +31,7 @@
 
 .eachCard{
     width: 90%;
-    background-color: rgb(244, 230, 241);
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     padding: 3%;
     border-radius: 5px;
@@ -46,50 +46,13 @@
 }
 
 .newLove i{
-    /* color: rgb(82, 112, 125); */
-    color: rgb(219, 25, 200);
-    
-}
-
-.eachSort{
-    width: 90%;
-    background-color: rgb(244, 230, 241);
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    padding: 3%;
-    border-radius: 5px;
-    line-height: 15px;
-}
-
-.eachSort div{
-    display: flex;
-    cursor: pointer;
-    justify-content: space-between;
-    padding: 5%;
-}
-
-.newLtH i{
-    /* color: rgb(82, 112, 125); */
-    color: rgb(219, 25, 200);
-}
-
-.newHtL i{
-    /* color: rgb(82, 112, 125); */
     color: rgb(219, 25, 200);
 }
 
 .newCart{
-    background-color: rgb(242, 213, 247);
+    background-color: black;
     border: 1px solid rgb(82, 112, 125);
-    color: rgb(82, 112, 125);
+    color: white;
     padding: 4%;
-    border-radius: 8%;
- 
-}
-
-.newSort{
-    background-color: rgb(242, 213, 247);
-    border: 1px solid rgb(82, 112, 125);
-    color: rgb(82, 112, 125);
-    padding: 4%;
-    border-radius: 8%;
+    border-radius: 20px;
 }
