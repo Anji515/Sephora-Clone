@@ -61,12 +61,13 @@ addproducts.addEventListener("submit",(event)=>{
         obj[items[i].id] = items[i].value
     }
     postProducts(obj)
+    postProducts2(obj)
     console.log(obj)
 })
 
 async function postProducts(obj){
    try {
-    let res = await fetch('https://63984905fe03352a94cb30eb.mockapi.io/products',{
+    let res = await fetch('https://63984905fe03352a94cb30eb.mockapi.io/adpro',{
         method:'POST',
         headers:{
             'Content-Type':'application/json'
@@ -85,16 +86,65 @@ async function postProducts(obj){
    
 }
 
+
+async function postProducts2(obj){
+    try {
+     let res = await fetch('https://63984905fe03352a94cb30eb.mockapi.io/products',{
+         method:'POST',
+         headers:{
+             'Content-Type':'application/json'
+         },
+         body:JSON.stringify(obj)
+        })
+        if(res.ok){
+         showmessage("Product Added Sucessfully","green","fa-check")
+        }else{
+         
+         showmessage("Unable to add Product","red","fa-xmark")
+        }
+    } catch (error) {
+     showmessage("Unable to add Product","red","fa-xmark")
+    } 
+    
+ }
+
+
+
+
+
+
+
+
 dltproducts.addEventListener('submit',(event)=>{
     event.preventDefault()
     let id =  document.querySelector("#Product-id").value
     console.log(id)
     deleteRequest(id)
+    deleteRequest2(id)
 })
 
 async function deleteRequest(id){
     try {
-        let res = await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products/${id}`,{
+        let res = await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/adpro/${id}`,{
+            method:'DELETE',
+            headers:{
+                'Content-Type':'application/json'
+            }
+        })
+        if(res.ok){
+            showmessage("Product removed Sucessfully","green","fa-check")
+        }else{
+            showmessage("Unable to delete products","red","fa-xmark") 
+        }
+    } catch (error) {
+        showmessage("Unable to delete products","red","fa-xmark")
+    }
+}
+
+
+async function deleteRequest2(id){
+    try {
+        let res = await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/adpro/${id}`,{
             method:'DELETE',
             headers:{
                 'Content-Type':'application/json'
@@ -112,7 +162,7 @@ async function deleteRequest(id){
 
 
 async function fetchAdminProducts(){
- let res = await fetch ('https://63984905fe03352a94cb30eb.mockapi.io/products')
+ let res = await fetch ('https://63984905fe03352a94cb30eb.mockapi.io/adpro')
  let data = await res.json()
  console.log(data)
  renderData(data)
