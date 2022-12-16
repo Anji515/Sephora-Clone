@@ -1,6 +1,8 @@
 import { showmessage } from "./popupMessage.js";
 let baseUrl="https://63984905fe03352a94cb30eb.mockapi.io/"
 let sform=document.querySelector(".signup-wrapper form");
+let user_redirect_link="https://github.com/Anji515/zesty-whistle-6002";
+let admin_redirect_link="https://oj.masaischool.com/contest/6483/problems"
 sform.addEventListener("submit",async(e)=>{
     e.preventDefault()
     document.querySelector(".signup-wrapper form input[type=submit]").value="Wait...";
@@ -31,7 +33,7 @@ async function checkUser(obj,type){
     let res=await data.json();
         let is=false
         res.forEach(item => {
-            if(item.email==obj.email){
+            if(item.email==obj.email || item.username==obj.username){
                 is=true;
             }
         });
@@ -48,6 +50,70 @@ async function checkUser(obj,type){
             showmessage(`${text} created successfully`,"green","fa-check")
         }else{
             showmessage(`${text} already exists!`,"red","fa-xmark")
+        }
+    
+    }catch(error){
+        showmessage("Oops!something went wrong","red","fa-xmark")
+        console.log(error)
+    }
+    
+}
+
+
+//Login function
+
+let login_form=document.querySelector(".login-wrapper form");
+login_form.addEventListener("submit",async(e)=>{
+    e.preventDefault()
+    document.querySelector(".login-wrapper form input[type=submit]").value="Wait...";
+    document.querySelector(".login-wrapper form input[type=submit]").style="cursor: not-allowed;";
+    let object={};
+    let role=document.querySelector("#loginrole").value;
+    let inputs=document.querySelectorAll(".login-wrapper form input");
+    object.username=inputs[0].value;
+    object.password=inputs[1].value;
+    if(role=="user"){
+        let data=await loginUser(object,"user")
+        document.querySelector(".login-wrapper form input[type=submit]").value="Login";
+        document.querySelector(".login-wrapper form input[type=submit]").style="cursor: normal;"
+    }else{
+        let data=await loginUser(object,"admin")
+        document.querySelector(".login-wrapper form input[type=submit]").value="Login";
+        document.querySelector(".login-wrapper form input[type=submit]").style="cursor: normal;"
+    }
+    
+});
+
+async function loginUser(obj,type){
+    let text;
+    type=="user"?text="User":text="Admin"
+    try{
+        let data=await fetch(baseUrl+type)
+    let res=await data.json();
+        let is=false
+        let user_data_loggedin;
+        res.forEach(item => {
+            if(item.username==obj.username && item.password==obj.password){
+                is=true;
+                user_data_loggedin=item;
+            }
+        });
+        if(is){
+            if(type=="user"){
+                showmessage(`Welcome ${obj.username}!`,"green","fa-check");
+                sessionStorage.setItem("loggedin-userid",user_data_loggedin.id);
+                setTimeout(()=>{
+                    window.location.href=user_redirect_link;
+                },100)
+            }else{
+                showmessage(`Welcome ${obj.username} to the admin page!`,"green","fa-check");
+                setTimeout(()=>{
+                    window.location.href=admin_redirect_link;
+                },100)
+            }
+           
+        }else{
+            showmessage(`Wrong credentials!`,"red","fa-xmark")
         }
         
     
