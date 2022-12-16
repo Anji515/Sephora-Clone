@@ -1,11 +1,12 @@
 *{
     text-decoration: none;
+    
 }
 
 #newContainer{
     display: flex;
     margin: auto;
-    width: 100%;
+    width: 95%;
     color:black;
     gap: 5%;
 }
@@ -16,11 +17,10 @@
 
 #newCards{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     align-items: center;
     text-align: center;
     width: 100%;
-    column-gap: 3%;
     row-gap: 20px;
 }
 
@@ -33,5 +33,26 @@
     width: 90%;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 3%;
+    border-radius: 5px;
+    line-height: 15px;
+}
+
+.eachCard div{
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.newLove i{
+    color: rgb(219, 25, 200);
+}
+
+.newCart{
+    background-color: black;
+    border: 1px solid rgb(82, 112, 125);
+    color: white;
     padding: 4%;
+    border-radius: 20px;
 }
