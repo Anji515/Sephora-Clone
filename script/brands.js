@@ -1,4 +1,4 @@
-import {nav} from './component/nav.js';
+import {nav} from '../component/nav.js';
 let navbar=document.getElementById('brandsNav');
 navbar.innerHTML=nav();
 
