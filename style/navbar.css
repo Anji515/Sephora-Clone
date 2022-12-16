@@ -16,62 +16,110 @@ body{
     text-decoration: underline;
 }
 /* SEARCH BAR */
-#search{
-    /* border: 1px solid; */
-    display: flex;
-    padding: 5px;
-    justify-content: space-between;
-}
-#logo{
-    width:10%;
+.logo{
+    width:17%;
     height: 8%;
     align-items: center;
-    /* border: 1px solid black; */
-    /* padding-top: 8px; */
-    margin-left: 2pc;
-}
-#content{
-    /* border: 1px solid; */
-    display: flex;
-    width: 85%;
-    /* justify-content:space-around; */
-    gap: 15px;
-    align-items: center;
-}
-.store{
-    /* border: 1px solid; */
-    display: flex;
-    justify-content: space-evenly;
-    font-size:12px;
-    width: 15%;
-}
-#comm{
-    /* border: 1px solid; */
-    display: flex;
-    width: 16%;
-    justify-content: space-around;
-}
-#sigin{
-    font-weight: bold;
-    width: 10%;
-}
-#sigin img{
-width:35%
-}
-#comm>img{
-    width: 18%;
-}
-.store img{
-    /* border: 2px solid firebrick; */
-    width:23.5%
+    margin-left: 1pc;
 }
 input[type="search"]{
-border-radius: 20px;
-padding: 0.8pc 15pc 0.8pc 0.7pc;
+    border-radius: 20px;
+padding: 0.8pc 15pc 0.8pc 0.9pc;
 font-size: 16px;
 border: none;
-margin-left: 2pc;
+margin-top: 1pc;
 background-color: rgb(243, 244, 245);
+} 
+.container2{
+    /* border:3px solid cadetblue; */
+    /* max-width: 1300px; */
+    margin: auto;
+}
+.item-center2{
+    flex:0 0 35%;
+    /* border: 1px solid palevioletred; */
+}
+.list-item2 > img{
+width: 97%;
+}
+/* .head{
+    margin-top: 0.6pc;
+} */
+.sub-menu2 > a{
+    border: 2px solid black;
+    padding: 0.5pc 1pc 0.5pc 1pc;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 20px;
+    margin-left:2.2pc;
+}
+.menu-item-has-children2 > .icon{
+    font-size:21px;
+}
+.item-right2 > a{
+    font-size: 20px;
+    margin-left: 1pc;
+    /* margin-top: 5pc ; */
+    /* border:1px solid; */
+    /* padding-top: 5pc ; */
+    color: black;
+}
+
+.sub-menu2 > a:hover{
+    background-color: black;
+    color: white;
+}
+.item-right2{
+    /* border: 1px solid palevioletred; */
+flex:0 0 10%;
+    margin-top: 1.5pc;
+    /* border: 1px solid firebrick; */
+}
+.menu2 > ul >li {
+    display: inline-block;
+    line-height:5pc;
+    margin-left:20px;
+    margin-right:20px;
+}
+.menu2 > ul >li > a{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    /* position: relative; */
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+}
+.menu2 > ul > li .sub-menu > ul >li > a:hover
+,.menu2 > ul > li:hover > a{
+    /* color: rgb(201, 199, 199); */
+    padding-bottom: 0.6pc;
+    border-bottom: 2px solid black;
+}
+.menu2 > ul > li .sub-menu2{
+    width: 27%;
+    position: absolute;
+    z-index: 40;
+    background-color: white;
+    padding:1.5pc 0px 0px 1pc;
+    transition: all 0.5s ease;
+    margin-top: 20px;
+    opacity: 0;
+    margin-right:2pc;
+    border-radius: 5px;
+    box-shadow: rgb(38, 57, 77) 10px 20px 30px 10px;
+    visibility: hidden;
+}
+.menu2 > ul > li.menu-item-has-children2:hover .sub-menu2{
+    /* margin-right: 15pc; */
+    margin-top: -8px; 
+    opacity: 1;
+    visibility: visible;
+} 
+.menu2 > ul > li .sub-menu2{
+    left: 55%;
+    right: 45%;
+    transform: translateX(-1%); 
 }
 /* CATEGORY */
 /* https://www.sephora.com/img/ufe/bg-gifts-left.png */
@@ -79,8 +127,16 @@ background-color: rgb(243, 244, 245);
 :before,:after{
     box-sizing: border-box;
 }
+.item-center{
+    margin: auto;
+    width: 100%;
+    /* background-color: #4f0f6d; */
+}
+.item-right{
+    background-color: yellow;
+}
 .container{
-    /* border: 1px solid aliceblue; */
+    border: 1px solid aliceblue;
     background-color: black;
     max-width:100%;
     margin: auto;
@@ -93,20 +149,9 @@ ul{
     list-style: none;
     margin: 0%;
     padding: 0%;
-    
 }
 a{
     text-decoration: none;
-}
-.item-center{
-    /* border: 1px solid yellow; */
-    /* background-color: red; */
-    flex:1 1 65%;
-
-    /* flex:0 0 90% */
-}
-.v-center{
-    align-items: center;
 }
 .menu > ul > li {
     /* border: 1px solid darkorange; */
@@ -153,9 +198,6 @@ a{
     text-decoration: none;
 }
 .menu > ul > li .sub-menu.mega-menu{
-    /* min-width: ;
-    max-width: 1100px;
-    width: 100%;*/
     left: 10%;
     transform: translateX(-10%); 
 }
