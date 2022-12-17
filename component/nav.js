@@ -5,6 +5,7 @@ function nav(){
     Join Beauty Insider and get20% off* Full-Size Frangrance with code FRAGRANCE20. *Team apply . SEE DETAILS 
   </h3>
 </div>
+
 <!-- SEARCH BAR -->
 <div id="search">
   <img src="./images/cosmeticlogo.png" id="logo" alt="logo">
@@ -30,22 +31,71 @@ function nav(){
       <img id='goToCart' src="./images/cartI.png" alt="cart">
     </div>
   </div>
+
+<div class="container2">
+<div class="row">
+<div class="logo">
+
+<a href="home.html"><img src="./images/cosmeticlogo.png" alt="" style="width:60%;"></a>
+</div>
+<div>
+  <input type="search" placeholder="Search">
+</div>
+<div class="header-item2 item-center2">
+  <nav class="menu2">
+    <ul class="menu-main2">
+      <li class="menu-item-has-children2">
+        <a href="#" class="icon"><i class="fa-solid fa-store"></i></a>
+        <a href="" class="head">Stores & Services</a>
+        <div class="sub-menu2">
+          <div class="list-item2">
+            <img src="./images/chooseYourStore.png" alt="">
+          </div>
+        </div>
+      </li>
+      <li class="menu-item-has-children2">
+        <a href="#" class="icon"><i class="fa-solid fa-people-roof"></i></a>
+        <a href="#">Community</a>
+        <div class="sub-menu2">
+          <div class="list-item2">
+            <img src="./images/communityNavbar.png" alt="">
+          </div>
+        </div>
+      </li>
+      <li class="menu-item-has-children2">
+        <a href="#" class="icon"><i class="fa-solid fa-user-pen"></i></a>
+        <a href="#">SIGN UP</a>
+        <div class="sub-menu2">
+          <a href="signupLogin.html">Sign Up</a><a href="signupLogin.html">Create Account</a>
+          <div class="list-item2">
+            <img src="./images/signupCOntent.png" alt="">
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</div>
+<div class="header-item2 item-right2">
+  <a href=""><i class="fa-solid fa-comment"></i></a>
+  <a href="loveList.html"><i class="fa-regular fa-solid fa-heart"></i></a>
+  <a href="basket.html"><i class="fa-solid fa-basket-shopping"></i></a>
+</div>
+</div>
 </div>
 
-<!-- CATEGORY NAVBAR -->
+
 
 <div class="container">
-<div class="row v-center">
+<div class="row">
   <div class="header-item item-center">
     <nav class="menu">
       <ul class="menu-main">
         <li class="menu-item-has-children">
-          <a href="" id="new">New</a>
+          <a href="newPage.html" id="new">New</a>
           <div class="sub-menu mega-menu mega-menu-column-4">
             <div class="list-item">
-              <!-- <h5 class="bolder">All New</h5> -->
               <ul>
-                <li><a href="#">Just Dropped</a></li>
+                <li><a href="newPage.html">Just Dropped</a></li>
                 <li><a href="#">New Makeup</a></li>
                 <li><a href="#">New Skin Care</a></li>
                 <li><a href="#">New Hair</a></li>
@@ -55,7 +105,6 @@ function nav(){
               </ul>
             </div>
             <div class="list-item">
-              <!-- <h5 class="bolder"></h5> -->
               <ul>
                 <li><a href="#">Rouge First Access</a></li>
                 <li><a href="#">The Next Big Thing</a></li>
@@ -74,17 +123,17 @@ function nav(){
           </div>
         </li>
         <li class="menu-item-has-children">
-                      <a href=""> Brands</a>
+                      <a href="brands.html"> Brands</a>
                       <div class="sub-menu mega-menu mega-menu-column-4">
                         <div class="list-item">
                           <h5 class="bolder">Brands A-Z</h5>
                           <ul>
-                            <li class="bolder"><a href="#">SEPHORA COLLECTION</a></li>
-                            <li class="bolder"><a href="#">New Brands</a></li>
-                            <li><a href="#">Simi Haze</a></li>
-                            <li><a href="#">Curlsmith</a></li>
-                            <li><a href="#">Boy Smells</a></li>
-                            <li><a href="#">Kulfi</a></li>
+                            <li class="bolder"><a href="brands.html">SEPHORA COLLECTION</a></li>
+                            <li class="bolder"><a href="brands.html">New Brands</a></li>
+                            <li><a href="brands.html">Simi Haze</a></li>
+                            <li><a href="brands.html">Curlsmith</a></li>
+                            <li><a href="brands.html">Boy Smells</a></li>
+                            <li><a href="brands.html">Kulfi</a></li>
                           </ul>
                         </div>
                         <div class="list-item">
@@ -335,8 +384,8 @@ function nav(){
               <li>Hair Straightners</li>
               <li>Curling irons</li>
             </ul>
-            <!-- <h5 class="bolder">Brushes & Combs</h5>
-            <h5 class="bolder"> Accessories</h5> -->
+            <h5 class="bolder">Brushes & Combs</h5>
+            <h5 class="bolder"> Accessories</h5>
           </div>
           <div class="list-item">
             <h5 class="bolder">Help Me Choose</h5>
@@ -644,7 +693,8 @@ function nav(){
     </nav>
   </div>
 </div>
-</div>
+</div> 
+
   `
 }
 

@@ -16,7 +16,7 @@ body{
     /* border: 1px solid; */
     margin-top: 3pc;
 }
-.choose_for_you h2{
+.choose_for_you h2,#selling_fast h2,#insider h2,#feature h2{
     margin-left: 1.4pc;
 }
 .choose{
@@ -62,10 +62,10 @@ body{
  margin-top:-0.3pc
 }
 /* ALL SLIDING BUTTONS STYLING */
-#new_products,#choose_products,#carousel,#Beauty_offer,#perfectPresent,#perfectPresent2{
+#new_products,#choose_products,#carousel,#Beauty_offer,#perfectPresent,#perfectPresent2,#Sell_products,#insider_product{
     position: relative;
 }
-.prev,.prev2,.prev3,.prev4,.prev5,.prev6{
+.prev,.prev2,.prev3,.prev4,.prev5,.prev6,.prev7,.prev8{
     position:absolute;
     cursor: pointer;
     object-fit: cover;
@@ -79,7 +79,7 @@ body{
     display: none;
     transform:translate(0%,-50%);
 }
-.next,.next2,.next3,.next4,.next5,.next6{
+.next,.next2,.next3,.next4,.next5,.next6,.next7,.next8{
     position:absolute;
     cursor: pointer;
     object-fit: cover;
@@ -94,7 +94,10 @@ body{
     transform:translate(80pc,0pc);
 }
 #carousel:hover .next,#carousel:hover .prev,#new_products:hover .prev3,#choose_products:hover .prev2,#choose_products:hover .next2,#new_products:hover .next3,#Beauty_offer:hover .prev4,#Beauty_offer:hover .next4,#perfectPresent:hover .prev5,#perfectPresent:hover .next5,
-#perfectPresent2:hover .prev6,#perfectPresent2:hover .next6{
+#perfectPresent2:hover .prev6,#perfectPresent2:hover .next6,#Sell_products:hover .prev7,#Sell_products:hover .next7,
+#insider_product:hover .next8,
+#insider_product:hover .prev8
+{
     display: block
 }
 /* BEAUTY */
@@ -137,3 +140,73 @@ body{
     box-shadow: rgba(99, 99, 99, 0.2) 10px 10px 10px 10px;
     border-radius: 5px;
 }
+.points{
+    font-weight: 560;
+}
+.sell,.inside,.feature_box{
+    /* border: 1px solid darkblue; */
+    padding: 2pc;
+    display: flex;
+    overflow: hidden;
+    gap: 1.5pc;
+    scroll-behavior: smooth;
+}
+.inside div p,.sell div p,.feature_box div p{
+    font-size: 14px;
+    margin-left: 0.7pc;
+}
+.sell div,.inside div{
+    padding: 1.3pc;
+
+    /* border: 1px solid firebrick; */
+    box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 0px;
+    border-radius: 5px;
+    /* padding-bottom:0.7pc */
+}
+#feature{
+    margin-bottom: 2pc;
+}
+.feature_box div{
+    box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 0px;
+    border-radius: 5px; 
+    padding: 0.5pc;
+}
+.feature_box div img{
+    margin-left: 2pc;
+    margin-right: 1pc;
+}
+.sell div:hover,.inside div:hover,.feature_box div:hover{
+    margin-bottom: 0.4pc;
+    margin-top:-0.4pc
+}
+
+.access1{
+    color: black;
+    font-size: 12px;
+    border: 2px solid;
+    border-radius:8px;
+    font-weight: 560;
+    padding: 0.5pc;
+}
+.access1:hover{
+    color: white;
+    background-color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

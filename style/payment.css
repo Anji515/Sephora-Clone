@@ -33,6 +33,35 @@
     align-items: center;
     padding: 10px;
 }
+.address{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.address>input{
+    margin-bottom: 5px;
+    height: 30px;
+    border-color: transparent;
+}
+.name{
+    display: flex;
+    margin-bottom: 5px;
+    height: 30px;
+}
+.name>input{
+    width: 100px;
+    margin-right: 5px;
+    border-color: transparent;
+}
+.zip{
+    display: flex;
+}
+.zip>input{
+    width: 85px;
+    height: 30px;
+    margin-right: 5px;
+    border-color: transparent;
+}
 /* =================== Delivery & Gift Options ================ */
 .column1-2{
     display: flex;
