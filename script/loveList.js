@@ -3,33 +3,33 @@ import {nav} from '../component/nav.js';
 let navbar=document.getElementById('loveNav');
 navbar.innerHTML=nav();
 
-// redirect to Lovelist
-const goToLove=document.getElementById('goToLove');
-goToLove.style.cursor='pointer';
-goToLove.addEventListener('click',()=>{
-    window.location.href='./loveList.html'
-})
+// // redirect to Lovelist
+// const goToLove=document.getElementById('goToLove');
+// goToLove.style.cursor='pointer';
+// goToLove.addEventListener('click',()=>{
+//     window.location.href='./loveList.html'
+// })
 
-// redirect to homePage
-const logo=document.getElementById('logo');
-logo.style.cursor='pointer';
-logo.addEventListener('click',()=>{
-    window.location.href='./home.html'
-})
+// // redirect to homePage
+// const logo=document.getElementById('logo');
+// logo.style.cursor='pointer';
+// logo.addEventListener('click',()=>{
+//     window.location.href='./home.html'
+// })
 
-// redirect to cartPage
-const goToCart=document.getElementById('goToCart');
-goToCart.style.cursor='pointer';
-goToCart.addEventListener('click',()=>{
-    window.location.href='./basket.html'
-})
+// // redirect to cartPage
+// const goToCart=document.getElementById('goToCart');
+// goToCart.style.cursor='pointer';
+// goToCart.addEventListener('click',()=>{
+//     window.location.href='./basket.html'
+// })
 
-// redirect to signInPage
-const goToSignin=document.getElementById('goToSignin');
-goToSignin.style.cursor='pointer';
-goToSignin.addEventListener('click',()=>{
-    window.location.href='./signupLogin.html';
-})
+// // redirect to signInPage
+// const goToSignin=document.getElementById('goToSignin');
+// goToSignin.style.cursor='pointer';
+// goToSignin.addEventListener('click',()=>{
+//     window.location.href='./signupLogin.html';
+// })
 
 
 // rendering Love list
