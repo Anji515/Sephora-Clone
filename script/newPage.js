@@ -290,3 +290,40 @@ async function addToLoveList(id){
 	}
 }
 
+
+// sortRating data from High to Low
+const sortHtoLoRating=document.getElementById('sortHtoLoRating')
+sortHtoLoRating.addEventListener('click',sortRating)
+
+async function sortRating(){
+
+    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=25&sortBy=rating&order=desc`);
+    let data=await res.json();
+    renderData(data)
+}
+
+
+// sortRating data from Low to Low
+
+const sortLtoHRating=document.getElementById('sortLtoHRating')
+sortLtoHRating.addEventListener('click',sortRating1)
+
+async function sortRating1(){
+
+    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=25&sortBy=rating&order=asc`);
+    let data=await res.json();
+    renderData(data)
+}
+
+
+
+// Filter part
+
+// const filter=document.querySelectorAll('#Brand');
+
+// filter.addEventListener('change',async (filter)=>{
+//     let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=25&filter=${filter}`);
+//     let data=await res.json();
+//     console(data)
+//     // renderData(event.target.value);
+// })

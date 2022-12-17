@@ -12,7 +12,29 @@
 }
 
 #newLeft{
+    width: 35%;
     cursor: pointer;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    
+    
+}
+.newL1{
+    background-color: white;
+    padding-left: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 20px;
+}
+#newLeft button{
+    background-color: aquamarine;
+    color: red;
+    padding: 6%;
+    margin-top: 8%;
+    border-radius: 20px;
 }
 
 #newCards{
@@ -22,6 +44,17 @@
     text-align: center;
     width: 100%;
     row-gap: 20px;
+}
+
+@media all and (min-width:860px) and (max-width:1280px){
+    #newCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (min-width:450px) and (max-width:859px){
+    #newCards{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 #newRight{
