@@ -20,19 +20,30 @@
             <div class="column1-1">
                 <div class="shipAdd">
                     <h3>Shipping Address</h3>
-                    <p></p>
+                    <div class="address">
+                        <div class="name">
+                            <input type="text" id="firstName" placeholder="First Name" value="Rakesh Ranjan" readonly>
+                            <input type="text" id="lastName" placeholder="Last Name" value="Kisku" readonly>
+                        </div>
+                        <input type="text" id="phone" placeholder="Phone" value="9167401960" readonly>
+                        <input type="text" id="street" placeholder="Full Address" value="Sastrinagar main road" readonly>
+                        <div class="zip">
+                            <input type="text" id="zip" placeholder="Zip/Postal Code" value="814501" readonly>
+                            <input type="text" id="city" placeholder="City" value="Dumka" readonly>
+                            <input type="text" id="state" placeholder="State/Region" value="Jharkhand" readonly>
+                        </div>
+                    </div>
                 </div>
-                <div><a href="#">Edit</a></div>
+                <div><a href="#" id="editAddress">Edit</a></div>
             </div>
             <hr>
 <!-- ========= Delivery & Gift Options ========== -->
             <div class="column1-2">
                 <div class="delivGift">
                     <h3>Delivery & Gift Options</h3>
-                    <h6></h6>
-                    <p></p>
+                    <h4>Free-Standard</h4>
+                    <p>Delivery by Mon, Dec 26</p>
                 </div>
-                <div><a href="#">Edit</a></div>
             </div>
             <hr>
 <!-- ========= Payment Method ========== -->
@@ -111,5 +122,6 @@
             </div>
         </div>
     </div>
+    <script src="script\payment.js"></script>
 </body>
 </html>
