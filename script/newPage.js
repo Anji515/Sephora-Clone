@@ -4,6 +4,35 @@ navbar.innerHTML=nav();
 
 const newCards=document.getElementById('newCards');
 
+// redirect to Lovelist
+const goToLove=document.getElementById('goToLove');
+goToLove.style.cursor='pointer';
+goToLove.addEventListener('click',()=>{
+    window.location.href='./loveList.html'
+})
+
+// redirect to homePage
+const logo=document.getElementById('logo');
+logo.style.cursor='pointer';
+logo.addEventListener('click',()=>{
+    window.location.href='./home.html'
+})
+
+// redirect to cartPage
+const goToCart=document.getElementById('goToCart');
+goToCart.style.cursor='pointer';
+goToCart.addEventListener('click',()=>{
+    window.location.href='./basket.html'
+})
+
+// redirect to signInPage
+const goToSignin=document.getElementById('goToSignin');
+goToSignin.style.cursor='pointer';
+goToSignin.addEventListener('click',()=>{
+    window.location.href='./signupLogin.html';
+})
+
+
 // Fetch from API
 async function getNewPro(){
 
@@ -17,7 +46,6 @@ getNewPro()
 
 
 let cartArr=JSON.parse(localStorage.getItem('cartList')) || [];
-
 let loveArr=JSON.parse(localStorage.getItem('loveList')) || [];
 
 
@@ -209,7 +237,7 @@ function renderSort(data){
 
 
 // Add to cart Function
-
+// let cartCount=0;
 async function addToCart(id){
 	try {
 		let cartRequest = await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products/${id}`,{
@@ -222,7 +250,12 @@ async function addToCart(id){
         if(cartRequest.ok){
 			let res= await cartRequest.json();
             // console.log(res);
-            cartArr.push(res);
+            // for(let el of cartArr){
+            //     if(res.title == el.title){
+            //       cartCount++;
+            //     } 
+            // }
+          cartArr.push(res);
         }
         localStorage.setItem('cartList',JSON.stringify(cartArr))
 	}
@@ -256,3 +289,4 @@ async function addToLoveList(id){
 		alert("You don't have access.")	
 	}
 }
+
