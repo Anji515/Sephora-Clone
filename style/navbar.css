@@ -230,6 +230,48 @@ a{
 
 
 
+#footer{
+    background-color: black;
+    color: white;
+}
+#footer div{
+    width: 40%;
+    padding: 2pc;
+    /* border: 1px solid white; */
+    margin: auto;
+}
+#footer div h4{
+    /* margin-left:3pc ; */
+}
+#footer div input{
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 1pc 6pc 1pc 1pc;
+    border: none;
+    margin: auto;
+}
+#footer div #fotsignup a{
+    color: white;
+    text-decoration: none;
+}
+#footer div #fotsignup a:hover{
+    color: black;
+}
+#footer div #fotsignup{
+    padding: 1pc;
+    border-radius: 5pc;
+    border: 2px solid white;
+    color: white;
+    font-size: 17px;
+    background-color: black;
+}
+#footer div #fotsignup:hover{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+
+}
 
 
 
