@@ -132,9 +132,6 @@ flex:0 0 10%;
     width: 100%;
     /* background-color: #4f0f6d; */
 }
-.item-right{
-    background-color: yellow;
-}
 .container{
     border: 1px solid aliceblue;
     background-color: black;
@@ -201,7 +198,6 @@ a{
     left: 10%;
     transform: translateX(-10%); 
 }
-
 .menu > ul > li .sub-menu.mega-menu-column-4{
     width: 95.55%;
     display: flex;
@@ -235,7 +231,8 @@ a{
     color: white;
 }
 #footer div{
-    width: 40%;
+    width: 50%;
+    background-color: black;
     padding: 2pc;
     /* border: 1px solid white; */
     margin: auto;
@@ -275,3 +272,186 @@ a{
 
 
 
+
+
+
+@media all and (min-width: 520px) and (max-width: 850px){
+
+    input[type="search"]{
+        display: none;
+    } 
+    .menu > ul > li {
+        display: flex;
+        flex-direction: row
+    }
+    .item-right2 > a{
+        margin-left: 0.93pc;
+    }
+    .item-right2{
+    flex:0 0 22%;
+        margin-top: 1.9pc;    }
+    .item-center2{
+        flex:0 0 40%;
+    }
+    .list-item2 > img{
+    width: 100%;
+    }
+    .sub-menu2{
+        width:80%
+    }
+    .sub-menu2 > a{
+        border: 2px solid black;
+        padding: 0.2pc 0.5pc 0.2pc 0.5pc;
+        color: black;
+        font-weight: bold;
+        font-size: 12px;
+        border-radius: 20px;
+        margin-left:1pc;
+    }
+    .menu-item-has-children2 > .icon{
+        font-size:26px;
+    }
+    .menu2 > ul >li {
+        display: inline-block;
+        line-height:5pc;
+        margin-left:20px;
+        margin-right:20px;
+    }
+    .menu2 > ul >li > a{
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        /* position: relative; */
+        text-transform: capitalize;
+        transition: all 0.3s ease;
+    }
+    .menu2 > ul > li .sub-menu2 > ul >li > a:hover
+    ,.menu2 > ul > li:hover > a{
+        padding-bottom: 0.7pc;
+    }
+    .menu2 > ul > li .sub-menu2{
+        width: 50%;
+        z-index:10;
+        padding:0.2pc 5px 0px 0.5pc;
+    }
+    .menu2 > ul > li .sub-menu2{
+        left: 40%;
+        right: 60%;
+        transform: translateX(-3%); 
+    }
+    /* CATEGORY */
+    /* https://www.sephora.com/img/ufe/bg-gifts-left.png */
+    /* https://www.sephora.com/img/ufe/bg-gifts-right.png */
+    :before,:after{
+        box-sizing: border-box;
+    }
+    .item-center{
+        margin: auto;
+        width: 100%;
+        /* background-color: #4f0f6d; */
+    }
+    .container{
+        border: 1px solid aliceblue;
+        background-color: black;
+        max-width:100%;
+        margin: auto;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul{
+        list-style: none;
+        margin: 0%;
+        padding: 0%;
+    }
+    a{
+        text-decoration: none;
+    }
+    .menu > ul{
+        /* border: 1px solid darkorange; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0%;
+        padding: 0%;
+    }
+    .menu > ul :nth-child(7),.menu > ul :nth-child(8),.menu > ul :nth-child(9),.menu > ul :nth-child(11),.menu > ul :nth-child(12){
+      display: none;
+    }
+    .menu > ul > li > a{
+        font-size: 13px;
+        padding: 0%;
+        margin: 0%;
+    }
+    .menu > ul > li .sub-menu > ul >li > a:hover
+    ,.menu > ul > li:hover > a{
+        /* color: rgb(201, 199, 199); */
+        padding-bottom: 0.1pc;
+        border-bottom: 2px solid white;
+    }
+    .menu > ul > li .sub-menu{
+        z-index: 100;
+        padding:1pc;
+        margin-top: 60px;
+        box-shadow: -2px 2px 70px -25px rgba(0,0,0,0.3);
+    }
+    .menu > ul > li.menu-item-has-children:hover .sub-menu{
+        margin-top: 8px;
+    } 
+    .menu > ul > li .sub-menu > ul >li >a{
+        display: inline-block;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+    .menu > ul > li .sub-menu.mega-menu{
+        left: 10%;
+        transform: translateX(-10%); 
+    }
+    .menu > ul > li .sub-menu.mega-menu-column-4{
+        width:100%;
+        display: flex;
+        gap: 1pc;
+        justify-content: space-evenly;
+    
+    }
+    .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img{
+        display: none;
+    }
+    .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item > ul > li > a,.menu > ul > li .sub-menu.mega-menu-column-4 > .list-item > ul > li {
+        color: black;
+        font-size: 10.5px;
+        font-weight: 500;
+    }
+    .giftsBg{
+        background-image:url("https://www.sephora.com/img/ufe/bg-gifts-left.png"),url("https://www.sephora.com/img/ufe/bg-gifts-right.png ");
+        background-repeat: no-repeat;
+        background-size: 13px 13px , 13px 13px
+    }
+    
+    .logo{
+        width:30%;
+        margin-top: 0pc;
+        margin-right: 0%;
+    }
+    .menu-item-has-children2 > .icon{
+        font-size:19.5px;
+        margin-left: 0%;
+    }
+    .menu-item-has-children2 > a+a{
+        display: none;
+    }
+    #offer{
+        display: none;
+    }
+    #footer{
+        width:500%;
+     }
+     #footer img{
+        width: 40%;
+     }
+    #footer div{
+        display: none;
+    }
+
+}

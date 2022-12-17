@@ -199,6 +199,194 @@ body{
 
 
 
+@media all and (min-width: 440px) and (max-width: 1000px){
+
+    #carousel .slider{
+        display: flex;
+        scroll-behavior: smooth;
+        overflow: hidden;
+    }
+    #carousel .slider img{
+        margin: 0.8pc;
+    }
+    
+    /* CHOOSE */
+    .choose_for_you{
+        /* border: 1px solid; */
+        margin-top: 3pc;
+    }
+    .choose_for_you h2,#selling_fast h2,#insider h2,#feature h2{
+        margin-left: 1.4pc;
+    }
+    .choose{
+        /* border: 1px solid firebrick; */
+        display: flex;
+        gap: 1.2pc;
+        padding: 1pc;
+        align-items: center;
+        scroll-behavior: smooth;
+        font-size: 14px;
+        overflow: hidden;
+    }
+    .choose div{
+        padding: 0.8pc;
+        border-radius: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        /* border: 1px solid green; */
+    }
+    .choose div:hover{
+     margin-bottom: 0.3pc;
+     margin-top:-0.3pc
+    }
+    /* JUST DROPPED */
+    
+    .just{
+        /* border: 1px solid firebrick; */
+        display: flex;
+        gap: 1.2pc;
+        padding: 1pc;
+        align-items: center;
+        font-size: 14px;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+    .just div{
+        padding: 0.8pc;
+        border-radius: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        /* border: 1px solid green; */
+    }
+    .just div:hover{
+     margin-bottom: 0.3pc;
+     margin-top:-0.3pc
+    }
+    /* ALL SLIDING BUTTONS STYLING */
+    #new_products,#choose_products,#carousel,#Beauty_offer,#perfectPresent,#perfectPresent2,#Sell_products,#insider_product{
+        position: relative;
+    }
+    .prev,.prev2,.prev3,.prev4,.prev5,.prev6,.prev7,.prev8{
+        left: 0pc;
+        top:50%;
+        opacity: 0.7;
+        display: none;
+        transform:translate(0%,-50%);
+    }
+    .next,.next2,.next3,.next4,.next5,.next6,.next7,.next8{
+        position:absolute;
+        cursor: pointer;
+        object-fit: cover;
+        border-radius: 50%;
+        padding: 1pc 1.1pc 1pc 1.1pc;
+        border:none;
+        background-color: rgb(28, 27, 27);
+        left: 14px;
+        opacity: 0.7;
+        top:46%;
+        display: none;
+        transform:translate(30pc,0pc);
+    }
+    #carousel:hover .next,#carousel:hover .prev,#new_products:hover .prev3,#choose_products:hover .prev2,#choose_products:hover .next2,#new_products:hover .next3,#Beauty_offer:hover .prev4,#Beauty_offer:hover .next4,#perfectPresent:hover .prev5,#perfectPresent:hover .next5,
+    #perfectPresent2:hover .prev6,#perfectPresent2:hover .next6,#Sell_products:hover .prev7,#Sell_products:hover .next7,
+    #insider_product:hover .next8,
+    #insider_product:hover .prev8
+    {
+        display: block
+    }
+    /* BEAUTY */
+    .beauty{
+        display: flex;
+        gap:20px;
+        padding: 1pc;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        align-items: center;
+        /* border: 1px solid firebrick; */
+    }
+    .beauty div{
+        /* height:25pc; */
+        border-radius: 5px;
+        box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 0px;
+    }
+    .beauty div button{
+        margin:  1pc;
+        border-radius: 20px;
+        padding: 0.4pc 1.7pc;
+        font-weight: bold;
+        background-color: white;
+    }
+    .beauty div img{
+        border-radius: 6px;
+        /* border: 1px solid; */
+    }
+    
+    /* PERFECT PRESENT*/
+    .present{
+        display: flex;
+        /* border: 1px solid; */
+        gap: 2pc;
+        padding: 1pc;
+        scroll-behavior: smooth;
+        overflow: hidden;
+    }
+    .present img{
+        box-shadow: rgba(99, 99, 99, 0.2) 10px 10px 10px 10px;
+        border-radius: 5px;
+    }
+    .points{
+        font-weight: 560;
+    }
+    .sell,.inside,.feature_box{
+        /* border: 1px solid darkblue; */
+        padding: 2pc;
+        display: flex;
+        overflow: hidden;
+        gap: 1.5pc;
+        scroll-behavior: smooth;
+    }
+    .inside div p,.sell div p,.feature_box div p{
+        font-size: 14px;
+        margin-left: 0.7pc;
+    }
+    .sell div,.inside div{
+        padding: 1.3pc;
+    
+        /* border: 1px solid firebrick; */
+        box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 0px;
+        border-radius: 5px;
+        /* padding-bottom:0.7pc */
+    }
+    #feature{
+        margin-bottom: 2pc;
+    }
+    .feature_box div{
+        box-shadow: rgba(99, 99, 99, 0.2) 2px 2px 8px 0px;
+        border-radius: 5px; 
+        padding: 0.5pc;
+    }
+    .feature_box div img{
+        margin-left: 2pc;
+        margin-right: 1pc;
+    }
+    .sell div:hover,.inside div:hover,.feature_box div:hover{
+        margin-bottom: 0.4pc;
+        margin-top:-0.4pc
+    }
+    
+    .access1{
+        color: black;
+        font-size: 12px;
+        border: 2px solid;
+        border-radius:8px;
+        font-weight: 560;
+        padding: 0.5pc;
+    }
+    .access1:hover{
+        color: white;
+        background-color: black;
+    
+    }
+
+}
 
 
 
