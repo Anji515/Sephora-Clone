@@ -22,12 +22,12 @@ function nav(){
     <div style="border-left:2px solid rgb(216, 214, 214);height:50px"></div>
     <div id="sigin" class="store">
       <img src="./images/girl1.png" alt="">
-      <p>Sign In</p>
+      <p id='goToSignin' >Sign In</p>
     </div>
     <div id="comm">
-      <img src="./images/chat.png" alt="comment">
-      <img src="./images/heart!.png" alt="wish">
-      <img src="./images/cartI.png" alt="cart">
+      <img  src="./images/chat.png" alt="comment">
+      <img id='goToLove' src="./images/heart!.png" alt="wish">
+      <img id='goToCart' src="./images/cartI.png" alt="cart">
     </div>
   </div>
 </div>
