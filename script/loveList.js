@@ -1,7 +1,13 @@
-
+// import navbar
 import {nav} from '../component/nav.js';
 let navbar=document.getElementById('loveNav');
 navbar.innerHTML=nav();
+
+// import Footer
+import {fot} from '../component/fot.js'
+let foot=document.getElementById('footerNew');
+foot.innerHTML=fot();
+
 
 // // redirect to Lovelist
 // const goToLove=document.getElementById('goToLove');
@@ -42,11 +48,11 @@ function fetchLove(){
         return` <div style='width:85%' class="eachCard">
             <img data-id=${el.id} src="${el.mainImage}" alt="">
             <h4 style='color:rgb(80, 63, 16)'>${el.brandName}</h4>
-            <p style='color:rgb(82, 112, 125)' >${el.title}</p>
+            <p style='color:rgb(82, 112, 125)' >${el.title.length<=20?el.title:el.title.substring(0,20)+'...'}</p>
             <h3 style='color:rgb(80, 63, 16)' data-id=${el.id}>$ ${el.price}</h3>
             <p style='color:rgb(80, 63, 16)'>Rating : ${el.rating}</p>
             <p style='color:rgb(80, 63, 16)'>Reviews : ${el.reviews}</p>
-             <button class='remLove' data-id=${el.id}>Remove</button>
+             <button class='remLove' data-id=${el.id}>Remove Item</button>
          </div>`
     });
          
@@ -58,7 +64,7 @@ function fetchLove(){
         images.style.width='55%';
         images.style.height='150px'
         }
-        //   Cart Event
+        //   remove Item Event
         // <button class='lToCart' data-id=${el.id}>Add To Cart</button>
         // let addToCartBtn= document.querySelectorAll(".lToCart"); 
         // for(let btn of addToCartBtn){
