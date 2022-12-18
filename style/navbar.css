@@ -31,13 +31,16 @@ margin-top: 1pc;
 background-color: rgb(243, 244, 245);
 } 
 .container2{
-    /* border:3px solid cadetblue; */
+    border:3px solid cadetblue;
     /* max-width: 1300px; */
     margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .item-center2{
     flex:0 0 35%;
-    /* border: 1px solid palevioletred; */
+    border: 1px solid palevioletred;
 }
 .list-item2 > img{
 width: 97%;
@@ -61,7 +64,7 @@ width: 97%;
     font-size: 20px;
     margin-left: 1pc;
     /* margin-top: 5pc ; */
-    /* border:1px solid; */
+    border:1px solid;
     /* padding-top: 5pc ; */
     color: black;
 }

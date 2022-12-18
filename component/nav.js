@@ -10,7 +10,7 @@ function nav(){
 <div class="row">
 <div class="logo">
 
-<a href="home.html"><img src="./images/cosmeticlogo.png" alt="" style="width:60%;"></a>
+<a href="home.html"><img src="./images/CosmeticLogoi.png" alt="" style="width:60%;"></a>
 </div>
 <div>
   <input type="search" placeholder="Search">
