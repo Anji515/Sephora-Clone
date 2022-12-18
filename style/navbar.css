@@ -241,6 +241,9 @@ a{
     padding-left: 7%;
     margin-top: 40px;
 }
+#footer img{
+    width: 90%;
+}
 #footer div{
     width: 50%;
     background-color: black;
@@ -253,8 +256,8 @@ a{
 }
 #footer div input{
     border-radius: 5px;
-    font-size: 17px;
-    padding: 1pc 6pc 1pc 1pc;
+    font-size: 15px;
+    padding: 0.7pc 6pc 0.7pc 0.7pc;
     border: none;
     margin: auto;
 }
@@ -266,11 +269,11 @@ a{
     color: black;
 }
 #footer div #fotsignup{
-    padding: 1pc;
+    padding: 0.6pc;
     border-radius: 5pc;
     border: 2px solid white;
     color: white;
-    font-size: 17px;
+    font-size: 15px;
     background-color: black;
 }
 #footer div #fotsignup:hover{
