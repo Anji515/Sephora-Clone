@@ -1,0 +1,46 @@
+#footerNew{
+    background-color: black;
+    color: white;
+    padding-left: 7%;
+    margin-top: 40px;
+}
+#footerNew div{
+    width: 40%;
+    padding: 2pc;
+    /* border: 1px solid white; */
+    margin: auto;
+}
+
+/* #footer div h4{
+    margin-left:3pc ;
+} */
+
+#footerNew div input{
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 1pc 6pc 1pc 1pc;
+    border: none;
+    margin: auto;
+}
+#footerNew div #fotsignup a{
+    color: white;
+    text-decoration: none;
+}
+#footerNew div #fotsignup a:hover{
+    color: black;
+}
+#footerNew div #fotsignup{
+    padding: 1pc;
+    border-radius: 5pc;
+    border: 2px solid white;
+    color: white;
+    font-size: 17px;
+    background-color: black;
+}
+#footerNew div #fotsignup:hover{
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+
+}

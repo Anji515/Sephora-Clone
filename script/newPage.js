@@ -2,6 +2,11 @@ import {nav} from '../component/nav.js';
 let navbar=document.getElementById('newNav');
 navbar.innerHTML=nav();
 
+
+import {fot} from '../component/fot.js'
+let foot=document.getElementById('footerNew');
+foot.innerHTML=fot();
+
 const newCards=document.getElementById('newCards');
 
 // // redirect to Lovelist
@@ -36,7 +41,7 @@ const newCards=document.getElementById('newCards');
 // Fetch from API
 async function getNewPro(){
 
-    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=25`);
+    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=28`);
     let data=await res.json();
     renderData(data);
     renderSort(data);
@@ -57,7 +62,7 @@ function renderData(data){
         return` <div style='width:85%' class="eachCard">
             <img data-id=${el.id} src="${el.mainImage}" alt="">
             <h4 style='color:rgb(80, 63, 16)'>${el.brandName}</h4>
-            <p style='color:rgb(82, 112, 125)' >${el.title}</p>
+            <p style='color:rgb(82, 112, 125)' >${el.title.length<=20?el.title:el.title.substring(0,20)+'...'}</p>
             <h3 style='color:rgb(80, 63, 16)' data-id=${el.id}>$ ${el.price}</h3>
             <p style='color:rgb(80, 63, 16)'>Rating : ${el.rating}</p>
             <p style='color:rgb(80, 63, 16)'>Reviews : ${el.reviews}</p>
@@ -86,6 +91,9 @@ function renderData(data){
     let addToCartBtn= document.querySelectorAll(".newCart"); 
     for(let btn of addToCartBtn){
         btn.addEventListener("click",(event)=>{ 
+            btn.style.backgroundColor='rgb(219, 25, 200)'
+            btn.style.color='black'
+            btn.innerHTML="Added To Cart"
             // console.log(event.path[0])
           let id = event.target.dataset.id;
           console.log(id);
@@ -100,7 +108,8 @@ function renderData(data){
         
     for(let lvBtn of addToLove){
         lvBtn.addEventListener("click",(event)=>{ 
-            // console.log(event.target)
+             lvBtn.classList.remove('fa-regular') 
+             lvBtn.classList.add('fa-solid'); 
            let id = event.target.dataset.id;
             // console.log("love",id);
             addToLoveList(id);
@@ -210,7 +219,7 @@ function renderSort(data){
         btn.addEventListener("click",(event)=>{ 
             // console.log(event.path[0])
           let id = event.target.dataset.id;
-          console.log(id);
+        //   console.log(id);
           addToCart(id);
          });
       }
@@ -249,15 +258,21 @@ async function addToCart(id){
         // console.log(cartRequest);
         if(cartRequest.ok){
 			let res= await cartRequest.json();
-            // console.log(res);
-            // for(let el of cartArr){
-            //     if(res.title == el.title){
-            //       cartCount++;
-            //     } 
-            // }
-          cartArr.push(res);
+            let isPresent=false;
+           for(let i=0; i<cartArr.length; i++){
+            if(cartArr[i].title == res.title){
+               isPresent=true;
+               break;
+            }
+           }
+           if(!isPresent){
+            cartArr.push(res);
+            localStorage.setItem('cartList',JSON.stringify(cartArr))
+           }else {
+            alert('Cart Item already present in Cart!');
+           }   
         }
-        localStorage.setItem('cartList',JSON.stringify(cartArr))
+        
 	}
 	
 	catch (error) {
@@ -319,11 +334,19 @@ async function sortRating1(){
 
 // Filter part
 
-// const filter=document.querySelectorAll('#Brand');
+const Filter=document.querySelector('#newSelect');
 
-// filter.addEventListener('change',async (filter)=>{
-//     let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products?page=1&limit=25&filter=${filter}`);
-//     let data=await res.json();
-//     console(data)
-//     // renderData(event.target.value);
-// })
+Filter.addEventListener('change',async ()=>{
+    let res=await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products`);
+    let data=await res.json();
+    console.log('data:', Filter.value)
+    if(Filter.value==""){
+        renderData(data)
+    }else{
+        let filtData=data.filter((el)=>{
+            return el.brandName == Filter.value;
+        })
+        console.log(filtData)
+        renderData(filtData)
+    }
+})

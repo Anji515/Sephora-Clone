@@ -12,7 +12,7 @@
 }
 
 #newLeft{
-    width: 35%;
+    width: 18%;
     cursor: pointer;
     align-items: center;
     text-align: center;
@@ -58,6 +58,7 @@
 }
 
 #newRight{
+    width:82%;
     align-items: center;
     text-align: center;
 }
