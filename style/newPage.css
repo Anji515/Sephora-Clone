@@ -90,3 +90,7 @@
     padding: 4%;
     border-radius: 20px;
 }
+
+#newSelect option{
+    text-align: center;
+}
