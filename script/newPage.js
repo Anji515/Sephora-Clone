@@ -257,6 +257,7 @@ async function addToCart(id){
         });
         // console.log(cartRequest);
         if(cartRequest.ok){
+            
 			let res= await cartRequest.json();
             let isPresent=false;
            for(let i=0; i<cartArr.length; i++){
@@ -266,6 +267,7 @@ async function addToCart(id){
             }
            }
            if(!isPresent){
+            res.count=1;
             cartArr.push(res);
             localStorage.setItem('cartList',JSON.stringify(cartArr))
            }else {
@@ -295,13 +297,26 @@ async function addToLoveList(id){
         
         if(loveRequest.ok){
 			let res= await loveRequest.json();
-            loveArr.push(res);
-            // console.log(res);
+            let isPresent=false;
+           for(let i=0; i<loveArr.length; i++){
+            if(loveArr[i].title == res.title){
+               isPresent=true;
+               break;
+              }
+           }
+           if(!isPresent){
+              res.count=1;
+              loveArr.push(res);
+              localStorage.setItem('loveList',JSON.stringify(loveArr))
+              } else {
+            alert('Cart Item already present in Cart!');
+           }   
         }
-        localStorage.setItem('loveList',JSON.stringify(loveArr))
-	}
+        // localStorage.setItem('loveList',JSON.stringify(loveArr))
+	 }
 	catch (error) {
 		alert("You don't have access.")	
+        console.log(error)
 	}
 }
 
