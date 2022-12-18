@@ -7,10 +7,14 @@
     <title>Basket | COSMO</title>
     <link rel="icon" href="basket-images\Cosmetic.png">
     <link rel="stylesheet" href="style\basket.css">
+    <link rel="stylesheet" href="./style/navbar.css">
 </head>
 <body>
+    <div id="newNav">
+        <!-- import Navbar -->
+   </div>
 <!-------------------------------------Basket------------------------------------------>
-    <div class="container">
+    <div class="contain">
         <h2>My Basket</h2>
 <!-------------------------------------left------------------------------------------>
 <!-- ========= save 25% ========== -->
@@ -31,7 +35,7 @@
                 </div>
 <!-- ========= Get It Shipped ========== -->
                 <div class="box1-2">
-                    <h3>Get It Shipped (0)</h3>
+                    <h3>Get It Shipped (<span id="totalitem"></span>)</h3>
                     <div class="box2-0">
                         <div class="box1-2-1">
                             <img src="basket-images\delivery.png" alt="delivery">
@@ -40,7 +44,7 @@
                         <hr>
                         <div class="box1-2-2">
                             <p>Your basket is currently empty.</p>
-                            <button>Shop New Arrivals</button>
+                            <button id="newArrivals">Shop New Arrivals</button>
                         </div>
                     </div>
                 </div>
@@ -51,7 +55,7 @@
                 <div class="box2-1">
                     <div id="merchTotal">
                         <p>Merchandise Subtotal</p>
-                        <h4>$0.00</h4>
+                        <h4 id="totalprice"></h4>
                     </div>
                     <div id="shipHand">
                         <p>Shipping & Handling</p>
@@ -64,7 +68,7 @@
                     <hr>
                     <div id="estTotal">
                         <h4>Estimated Total</h4>
-                        <h4>$0.00</h4>
+                        <h4 id="estimatedTotal">$0.00</h4>
                     </div>
                     <div class="paybtns">
                         <button id="checkoutBtn">Checkout Items</button><br>
@@ -92,5 +96,6 @@
         </div>
     </div>
     <script src="basket.js"></script>
+    <script type="module" src="basket.js"></script>
 </body>
 </html>
