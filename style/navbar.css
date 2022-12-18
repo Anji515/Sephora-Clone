@@ -172,7 +172,7 @@ a{
     color: white;
     position: relative;
     text-transform: capitalize;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 .menu > ul > li .sub-menu > ul >li > a:hover
 ,.menu > ul > li:hover > a{
@@ -185,7 +185,7 @@ a{
     z-index: 500;
     background-color: white;
     padding: 20px 30px;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
     margin-top: 60px;
     box-shadow: -2px 2px 70px -25px rgba(0,0,0,0.3);
     opacity: 0;
@@ -200,7 +200,7 @@ a{
     display: inline-block;
     padding: 10px 0;
     font-size: 15px;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
     text-decoration: none;
 }
 .menu > ul > li .sub-menu.mega-menu{
@@ -210,7 +210,6 @@ a{
 .menu > ul > li .sub-menu.mega-menu-column-4{
     width: 95.55%;
     display: flex;
-
     justify-content: space-evenly;
 
 }
