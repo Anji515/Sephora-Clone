@@ -37,6 +37,11 @@
     border-radius: 20px;
 }
 
+#newLeft button:hover{
+    background-color: rgb(187, 133, 133);
+    color: white;
+}
+
 #newCards{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -44,14 +49,34 @@
     text-align: center;
     width: 100%;
     row-gap: 20px;
-}
+} 
 
-@media all and (min-width:860px) and (max-width:1280px){
+    /* .eachCard:hover{
+        cursor: pointer;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease 0s;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        line-height: 1;
+        font-weight: 700;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 12px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.7);
+    } */
+
+
+@media all and (min-width:661px) and (max-width:1080px){
     #newCards{
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media all and (min-width:450px) and (max-width:859px){
+@media all and (min-width:360px) and (max-width:660px){
     #newCards{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -70,6 +95,7 @@
     padding: 3%;
     border-radius: 15px;
     line-height: 15px;
+
 }
 
 .eachCard div{
@@ -77,11 +103,22 @@
     cursor: pointer;
     justify-content: space-between;
     padding: 5%;
+    
+}
+.eachCard:hover{
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .newLove i{
     color: rgb(219, 25, 200);
 }
+
+#viewSymb{
+    color: rgb(175, 116, 116);
+}
+
+
 
 .newCart{
     background-color: black;
@@ -93,4 +130,16 @@
 
 #newSelect option{
     text-align: center;
+}
+
+#newSelect{
+    border-radius: 20px;
+    padding: 4%;
+    width:75%;
+    background-color: aquamarine;
+    color: red;
+}
+#newSelect:hover{
+    background-color: rgb(187, 133, 133);
+    color: white;
 }

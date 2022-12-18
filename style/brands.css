@@ -1,4 +1,6 @@
-
+body{
+    scroll-behavior: smooth;
+}
 #brandsTop{
     width:100%;
     margin: auto;
@@ -6,6 +8,10 @@
     text-align: center;
     justify-content: center;
     gap: 2%;
+}
+.clickscroll{
+    /* background-color: #12284c; */
+    text-shadow: red;
 }
 
 .Alfabets{
@@ -20,9 +26,15 @@
     padding-right: 20%;
     /* color: rgb(75, 134, 243); */
 }
-.alfaBet{
-    border-bottom: 1px solid #bbc1cc;
+
+#brandsData h1{
+      color: #797840;
+      padding-top: 40px;
+      border-bottom: 1px solid #bbc1cc;
 }
+/* .alfaBet{
+    
+} */
 .cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);

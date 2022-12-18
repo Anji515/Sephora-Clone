@@ -91,7 +91,7 @@ function renderData(data){
     let addToCartBtn= document.querySelectorAll(".newCart"); 
     for(let btn of addToCartBtn){
         btn.addEventListener("click",(event)=>{ 
-            btn.style.backgroundColor='rgb(219, 25, 200)'
+            btn.style.backgroundColor='rgb(214, 163, 209)'
             btn.style.color='black'
             btn.innerHTML="Added To Cart"
             // console.log(event.path[0])
@@ -161,7 +161,7 @@ function renderSort(data){
         btn.addEventListener("click",(event)=>{ 
             // console.log(event.path[0])
           let id = event.target.dataset.id;
-          console.log(id);
+        //   console.log(id);
           addToCart(id);
          });
       }
@@ -199,6 +199,7 @@ function renderSort(data){
             <p style='color:rgb(80, 63, 16)'>Reviews : ${el.reviews}</p>
            <div class='newLove'>
              <i data-id=${el.id} class="fa-regular fa-heart fa-2x"></i>
+             <i class="fa-solid fa-eye"></i>
              <button class='newCart' data-id=${el.id}>Add To Cart</button>
            </div>
          </div>`
@@ -271,7 +272,7 @@ async function addToCart(id){
             cartArr.push(res);
             localStorage.setItem('cartList',JSON.stringify(cartArr))
            }else {
-            alert('Cart Item already present in Cart!');
+            alert('This Item is Already present in Cart!');
            }   
         }
         

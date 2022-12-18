@@ -9,6 +9,7 @@ let foot=document.getElementById('footerNew');
 foot.innerHTML=fot();
 
 
+
 // // redirect to Lovelist
 // const goToLove=document.getElementById('goToLove');
 // goToLove.style.cursor='pointer';
@@ -41,10 +42,30 @@ foot.innerHTML=fot();
 // rendering Love list
 let loveArr = JSON.parse(localStorage.getItem('loveList')) || [];
 
-const loveData=document.getElementById('loveData')
+const loveCount=document.getElementById('loveCount');
 
-function fetchLove(){
-    let newData=loveArr.map((el)=>{
+loveCount.innerHTML=loveArr.length;
+
+const loveData=document.getElementById('loveData')
+const showMsg=document.getElementById('h1Tag');
+
+console.log(loveArr)
+
+if(loveArr.length === 0){
+    showMsg.style.display='block';
+    showMsg.style.color='rgb(40, 37, 212)';
+    showMsg.style.height='250px';
+    showMsg.style.width='100%';
+    showMsg.style.display='flex'
+    showMsg.style.alignItems='center'
+    showMsg.style.justifyContent='center'
+      
+}
+
+function fetchLove(Arr){
+try {
+    
+    let newData=Arr.map((el)=>{
         return` <div style='width:85%' class="eachCard">
             <img data-id=${el.id} src="${el.mainImage}" alt="">
             <h4 style='color:rgb(80, 63, 16)'>${el.brandName}</h4>
@@ -65,41 +86,32 @@ function fetchLove(){
         images.style.height='150px'
         }
         //   remove Item Event
-        // <button class='lToCart' data-id=${el.id}>Add To Cart</button>
-        // let addToCartBtn= document.querySelectorAll(".lToCart"); 
-        // for(let btn of addToCartBtn){
-        //     btn.addEventListener("click",(event)=>{ 
-        //         // console.log(event.path[0])
-        //       let id = event.target.dataset.id;
-        //     //   console.log(id);
-        //     //   addToCart(id);
-        //      });
-        //   }
+        
+        let removeBtn= document.querySelectorAll(".remLove"); 
+        for(let btn of removeBtn){
+            btn.addEventListener("click",(event)=>{ 
+                console.log(event)
+              let id = event.target.dataset.id;
+              console.log(id);
+              removeLove(id);
+              window.location.reload()
+             });
+          }
+
+} catch (error) {
+    alert('Something went wrong!')
+}
+    
 }
 
-fetchLove();
+fetchLove(loveArr);
+// console.log('loveArr:', loveArr)
 
 
-// async function addToCart(id){
-// 	try {
-// 		let cartRequest = await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/products/${id}`,{
-//             method : "PUT",
-//             headers : {
-//                "Content-Type" : "application/json",
-//             }
-//         });
-//         console.log(cartRequest);
-//         if(cartRequest.ok){
-// 			let res= await cartRequest.json();
-//             loveArr.push(res);
-            
-//         }
-//         // console.log(loveArr)
-//         localStorage.setItem('cartList',JSON.stringify(loveArr))
-// 	}
-	
-// 	catch (error) {
-// 		alert("You don't have access.")	
-// 	}
-// }
-
+function removeLove(id){
+    let remData = loveArr.filter((el)=>{
+       return el.id != id;
+    })
+    localStorage.setItem('loveList',JSON.stringify(remData));
+    fetchLove(remData)
+}
