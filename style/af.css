@@ -1,12 +1,17 @@
 #footerNew{
     background-color: black;
     color: white;
-    padding-left: 7%;
+    width: 100%;
+    /* padding-left: 2%; */
     margin-top: 40px;
 }
+#footerNew img{
+    width:100%;
+}
 #footerNew div{
-    width: 40%;
-    padding: 2pc;
+    width: 100%;
+    /* padding: 2pc; */
+    text-align: center;
     /* border: 1px solid white; */
     margin: auto;
 }

@@ -12,59 +12,59 @@ foot.innerHTML=fot();
 
 
 
-const alfabets= ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','W','Y','#']
+// const alfabets= ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','W','Y','#']
 
-const brandsTop=document.getElementById('brandsTop');
+// const brandsTop=document.getElementById('brandsTop');
 
 
-let alftaData=alfabets.map((el)=>{
-    return`
-      <h1 class='Alfabets' data-id=${el.id} >${el}</h1>
-    `
-})
+// let alftaData=alfabets.map((el)=>{
+//     return`
+//       <h1 class='Alfabets' data-id=${el.id} >${el}</h1>
+//     `
+// })
 
-brandsTop.innerHTML=alftaData.join(' ');
+// brandsTop.innerHTML=alftaData.join(' ');
 
-// To get track top ALfabets 
-const Alfabets=document.querySelectorAll('.Alfabets')
-// console.log(Alfabets);
-const divAlfa=document.querySelectorAll('.alfaBet p');
+// // To get track top ALfabets 
+// const Alfabets=document.querySelectorAll('.Alfabets')
+// // console.log(Alfabets);
+// const divAlfa=document.querySelectorAll('.alfaBet p');
 
-for(let alfa of Alfabets){
-    // console.log('tags',alfa.target);
-    alfa.addEventListener("click",(event)=>{ 
-        // console.log(event.path[0])
-        let id = event.target.innerText      ;
-    //   console.log(event);
-      console.log(id);
-         for(let el of divAlfa){
-        // console.log(el)
-        // console.log(el.innerHTML)
-            if(id==el.innerHTML){
-            console.log(el);
-            scrollTo.el
-           }
-      }
-         //   console.log(mappings)
-         //   goToItems(id);
-     });
-}
+// for(let alfa of Alfabets){
+//     // console.log('tags',alfa.target);
+//     alfa.addEventListener("click",(event)=>{ 
+//         // console.log(event.path[0])
+//         let id = event.target.innerText      ;
+//     //   console.log(event);
+//       console.log(id);
+//          for(let el of divAlfa){
+//         // console.log(el)
+//         // console.log(el.innerHTML)
+//             if(id==el.innerHTML){
+//             console.log(el);
+//             scrollTo.el
+//            }
+//       }
+//          //   console.log(mappings)
+//          //   goToItems(id);
+//      });
+// }
 
 
 // To get track brands ALfabets 
 let alfaDiv;
 
-for(let alfa of divAlfa){
-    // console.log('tags',alfa.target);
-    alfa.addEventListener("click",(event)=>{ 
-        // console.log(event.path[0])
-      let id = event.target.innerText      ;
-    //   console.log(goToItems);
-    //   console.log(id);
-      alfaDiv=id;
-    //   addToCart(id);
-     });
-}
+// for(let alfa of divAlfa){
+//     // console.log('tags',alfa.target);
+//     alfa.addEventListener("click",(event)=>{ 
+//         // console.log(event.path[0])
+//       let id = event.target.innerText      ;
+//     //   console.log(goToItems);
+//     //   console.log(id);
+//       alfaDiv=id;
+//     //   addToCart(id);
+//      });
+// }
 
 
 

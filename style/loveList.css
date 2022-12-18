@@ -11,12 +11,35 @@
     row-gap: 20px;
 }
 
+@media all and (min-width:661px) and (max-width:1080px){
+    #loveData{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (min-width:360px) and (max-width:660px){
+    #loveData{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+#loveCount{
+    /* color: ; */
+    color: red;
+    
+}
+
+
+#loveData div:hover{
+    background-color: whitesmoke;
+}
+
 .eachCard{
     width: 90%;
     background-color: white;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    padding: 3%;
     border-radius: 15px;
     line-height: 15px;
+    padding: 5%;
 }
 
 .eachCard div{
@@ -24,4 +47,14 @@
     cursor: pointer;
     justify-content: space-between;
     padding: 5%;
+}
+
+.eachCard button{
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    color: rgb(22, 21, 21);
+    background-color: rgb(240, 82, 9);
+    border: none;
+    font-weight: bolder;
 }
