@@ -12,7 +12,29 @@
 }
 
 #newLeft{
+    width: 18%;
     cursor: pointer;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    
+    
+}
+.newL1{
+    background-color: white;
+    padding-left: 10%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    padding-right: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 20px;
+}
+#newLeft button{
+    background-color: aquamarine;
+    color: red;
+    padding: 6%;
+    margin-top: 8%;
+    border-radius: 20px;
 }
 
 #newCards{
@@ -24,7 +46,19 @@
     row-gap: 20px;
 }
 
+@media all and (min-width:860px) and (max-width:1280px){
+    #newCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (min-width:450px) and (max-width:859px){
+    #newCards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 #newRight{
+    width:82%;
     align-items: center;
     text-align: center;
 }
@@ -32,9 +66,9 @@
 .eachCard{
     width: 90%;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     padding: 3%;
-    border-radius: 5px;
+    border-radius: 15px;
     line-height: 15px;
 }
 
@@ -55,4 +89,8 @@
     color: white;
     padding: 4%;
     border-radius: 20px;
+}
+
+#newSelect option{
+    text-align: center;
 }

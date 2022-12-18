@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/newPage.css">
     <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/af.css">
 </head>
 
 <body>
@@ -16,11 +17,12 @@
          <!-- import Navbar -->
     </div>
     
-    <div id="newContainer" style="background-image: url('.https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBxurQTNHllU24fGYD7PfnZAiEX9ZM56poPNtSaYIp2w&s'); ">
-          <div id="newLeft">
-
-          <h4>New</h4>
-    <select name="Brand"  id="newSelect">
+<div id="newContainer" >
+    <div id="newLeft">
+       <div class="newL1">
+       <h4 style="color: green; font-size: 22px; text-align: left; text-decoration: underline;">Filter</h4>
+       <select name="Brand"  id="newSelect">
+            <option value=""> Select Brand</option>
             <option value="Dior">Dior</option>
             <option value="Tatcha">Tatcha</option>
             <option value="Drunk Elephant">Drunk Elephant</option>
@@ -29,24 +31,34 @@
             <option value="Youth To The People">Youth To The People</option>
             <option value="Dr. Dennis Gross Skincare">Dr. Dennis Gross Skincare</option>
             <option value="Skinfix">Skinfix</option>
-            <option value="Dr. Dennis Gross Skincare">La Mer</option>
-            <option value="Dr. Dennis Gross Skincare">La Mer</option>
+            <option value="Glow Recipe">Glow Recipe</option>
+            <option value="Youth To The People">Youth To The People</option>
       </select>
           <div>
-              <button id="sortBtnLtH">Sort Low to High Price</button>
+              <button id="sortBtnLtH">Low to High Price</button>
           </div> 
           <div>
-             <button id="sortBtnHtL">Sort High to Low Price</button> 
+             <button id="sortBtnHtL">High to Low Price</button> 
           </div>
-    </div>
+          <div>
+            <button id="sortHtoLoRating">High to Low Ratings</button> 
+          </div>
+          <div>
+            <button id="sortLtoHRating">Low to High Ratings</button> 
+          </div>
+       </div>
+   </div>
 
     <div id="newRight">
         <h2>New Products</h2>
         <div id="newCards">
-        
+            <!-- import all cards here -->
         </div>
-
     </div>
+</div>
+
+<div id="footerNew">
+    <!-- import Navabar here -->
 </div>
 </body>
 <script type="module" src="./script/newPage.js"></script>

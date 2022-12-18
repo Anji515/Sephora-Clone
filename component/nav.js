@@ -9,7 +9,8 @@ function nav(){
 <div class="container2">
 <div class="row">
 <div class="logo">
-  <img src="./images/cosmeticlogo.png" alt="" style="width:60%;">
+
+<a href="home.html"><img src="./images/CosmeticLogoi.png" alt="" style="width:60%;"></a>
 </div>
 <div>
   <input type="search" placeholder="Search">
@@ -96,17 +97,17 @@ function nav(){
           </div>
         </li>
         <li class="menu-item-has-children">
-                      <a href=""> Brands</a>
+                      <a href="brands.html"> Brands</a>
                       <div class="sub-menu mega-menu mega-menu-column-4">
                         <div class="list-item">
                           <h5 class="bolder">Brands A-Z</h5>
                           <ul>
-                            <li class="bolder"><a href="#">SEPHORA COLLECTION</a></li>
-                            <li class="bolder"><a href="#">New Brands</a></li>
-                            <li><a href="#">Simi Haze</a></li>
-                            <li><a href="#">Curlsmith</a></li>
-                            <li><a href="#">Boy Smells</a></li>
-                            <li><a href="#">Kulfi</a></li>
+                            <li class="bolder"><a href="brands.html">SEPHORA COLLECTION</a></li>
+                            <li class="bolder"><a href="brands.html">New Brands</a></li>
+                            <li><a href="brands.html">Simi Haze</a></li>
+                            <li><a href="brands.html">Curlsmith</a></li>
+                            <li><a href="brands.html">Boy Smells</a></li>
+                            <li><a href="brands.html">Kulfi</a></li>
                           </ul>
                         </div>
                         <div class="list-item">

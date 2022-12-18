@@ -1,8 +1,8 @@
 import { showmessage } from "./popupMessage.js";
 let baseUrl="https://63984905fe03352a94cb30eb.mockapi.io/"
 let sform=document.querySelector(".signup-wrapper form");
-let user_redirect_link="https://github.com/Anji515/zesty-whistle-6002";
-let admin_redirect_link="https://oj.masaischool.com/contest/6483/problems"
+let user_redirect_link="./home.html";
+let admin_redirect_link="./admin-panel/admin.html"
 sform.addEventListener("submit",async(e)=>{
     e.preventDefault()
     document.querySelector(".signup-wrapper form input[type=submit]").value="Wait...";
@@ -107,6 +107,7 @@ async function loginUser(obj,type){
                 },100)
             }else{
                 showmessage(`Welcome ${obj.username} to the admin page!`,"green","fa-check");
+                sessionStorage.setItem("loggedin-adminid",user_data_loggedin.id);
                 setTimeout(()=>{
                     window.location.href=admin_redirect_link;
                 },100)
