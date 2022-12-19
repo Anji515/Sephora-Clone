@@ -6,6 +6,7 @@ console.log(cart)
 cartlist(cart)
 
 
+
 let navbar=document.getElementById('newNav');
 navbar.innerHTML=nav();
 
@@ -20,11 +21,7 @@ checkout.addEventListener("click",(event)=>{
     event.preventDefault();
     window.location.href="payment.html";
 })
-let newArrivals=document.getElementById("newArrivals");
-newArrivals.addEventListener("click",(event)=>{
-    event.preventDefault();
-    window.location.href="index.html";
-})
+
 
 function cartlist(arr){
     document.getElementById("totalitem").innerText=arr.length;
@@ -32,22 +29,46 @@ function cartlist(arr){
     if(arr.length==0){
         cartbox.innerHTML=`<p>Your basket is currently empty.</p>
         <button id="newArrivals">Shop New Arrivals</button>`
+        let newArrivals=document.getElementById("newArrivals");
+newArrivals.addEventListener("click",()=>{
+    window.location.href="home.html";
+})
     }else{
+        
         let cartItem=arr.map((item)=>{
-            sum+=+item.price;
+            sum+=+item.price*+item.count;
             return `<div class="item">
             <div class="image"><img src=${item.mainImage}>
-            <select id=select>
+            <select  data-id=${item.id} id=select>
+            <option value="">${item.count}</option>
             <option value=1>1</option>
             <option value=2>2</option>
             <option value=3>3</option></select></div>
             <div class="detail"><h3>${item.brandName}</h3>
             <p>${item.title}</p></div>
-            <div class="price"><p>$${item.price}</p>
+            <div class="price"><p>$${(+item.price*+item.count).toFixed(2)}</p>
             <button class=removebtn data-id=${item.id}>Remove</button></div>
             </div>`
         })
+        localStorage.setItem("totalSum",sum);
         cartbox.innerHTML=cartItem.join("");
+        let selecttags=document.querySelectorAll("#select");
+
+selecttags.forEach(function(el){
+    el.addEventListener("change",function(){
+        console.log(this.dataset.id)
+        let idd=this.dataset.id;
+        let val=el.value;
+        for(let i=0;i<cart.length;i++){
+            if(cart[i].id===idd){
+                cart[i].count=val;
+                localStorage.setItem("cartList",JSON.stringify(cart));
+                cartlist(cart)
+                break;
+            }
+        }
+    })
+})
     }
     document.getElementById("estimatedTotal").innerText=`$${sum.toFixed(2)}`
     document.getElementById("totalprice").innerText=`$${sum.toFixed(2)}`
