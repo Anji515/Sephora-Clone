@@ -1,7 +1,12 @@
+// import Navbar
 import {nav} from '../component/nav.js';
 let navbar=document.getElementById('newNav');
 navbar.innerHTML=nav();
 
+// import footer
+import {fot} from '../component/fot.js'
+let foot=document.getElementById('footerNew');
+foot.innerHTML=fot();
 
 
 const newCards=document.getElementById('newCards');
