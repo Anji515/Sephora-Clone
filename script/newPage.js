@@ -309,11 +309,8 @@ async function addToLoveList(id){
               res.count=1;
               loveArr.push(res);
               localStorage.setItem('loveList',JSON.stringify(loveArr))
-              } else {
-            alert('Cart Item already present in Cart!');
-           }   
+              } 
         }
-        // localStorage.setItem('loveList',JSON.stringify(loveArr))
 	 }
 	catch (error) {
 		alert("You don't have access.")	
