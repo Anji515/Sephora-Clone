@@ -1,4 +1,4 @@
-import {nav} from '../component/nav.js';
+import {nav} from './component/nav.js';
 let cartbox=document.querySelector(".box1-2-2");
 
 let cart=JSON.parse(localStorage.getItem("cartList"))||[];
