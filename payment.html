@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style\payment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="icon" href="basket-images\Cosmetic.png">
+    <link rel="stylesheet" href="./style/popupMessage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Checkout | COSMO</title>
 </head>
 <body>
@@ -66,7 +68,8 @@
                 <div class="check">
                     <i class="fa-solid fa-plus"></i>
                     <img src="basket-images\debit.png" alt="">
-                    <a href="#">Add new credit or debit card</a>
+                    <a id="cardDetails" href="#">Add new credit or debit card</a>
+                    <div class="debitcard"></div>
                 </div>
 <!-- ========= Gift card ========== -->
                 <div id="giftCard">
@@ -92,7 +95,7 @@
             <div class="column2-1">
                 <div id="merchTotal">
                     <p>Merchandise Subtotal</p>
-                    <h4>$0.00</h4>
+                    <h4 class="totall"></h4>
                 </div>
                 <div id="shipHand">
                     <p>Shipping & Handling</p>
@@ -105,7 +108,7 @@
                 <hr>
                 <div id="estTotal">
                     <h4>Estimated Total</h4>
-                    <h4>$0.00</h4>
+                    <h4 class="totall"></h4>
                 </div>
                 <hr>
             </div>
@@ -122,6 +125,11 @@
             </div>
         </div>
     </div>
-    <script src="script\payment.js"></script>
+    <div class="popup-message none opacity">
+        <div id="message-style" class=""></div>
+        <div id="message-icon" class="fa-solid"></div>
+        <div id="message-text"></div>
+ </div>
+    <script type="module" src="script\payment.js"></script>
 </body>
 </html>

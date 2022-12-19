@@ -13,11 +13,28 @@ let dltproducts = document.querySelector("#dltproducts")
 let dashbtn = document.querySelector("#dashbtn")
 let contents = document.querySelector(".contents")
 let adminproduct = document.querySelector('#admin-product')
+let value = document.querySelector(".nav-opt strong")
+let logout = document.querySelector("#logout")
+let totalPro = document.querySelector("#total-products h3")
+let user = document.querySelector("#profit h3")
+
+adminName()
+
 
 function def(){
     contents.classList.add('view')
 }
 def()
+
+no_Admin()
+async function no_Admin(){
+    let res = await fetch("https://63984905fe03352a94cb30eb.mockapi.io/user")
+    let data = await res.json()
+    let noOfUser = data.length
+    console.log(noOfUser)
+    user.innerHTML = noOfUser
+}
+
 
 
 dashbtn.addEventListener('click',()=>{
@@ -164,8 +181,10 @@ async function deleteRequest2(id){
 async function fetchAdminProducts(){
  let res = await fetch ('https://63984905fe03352a94cb30eb.mockapi.io/adpro')
  let data = await res.json()
+
  console.log(data)
  renderData(data)
+alv(data.length)
 }
 
 fetchAdminProducts()
@@ -188,3 +207,25 @@ function renderData(data){
     
     adminproduct.innerHTML=newData
 }
+
+async function adminName(){
+    let name = sessionStorage.getItem("loggedin-adminid")||null
+   if(name==0||name==null){
+    window.location.href = "../signupLogin.html"
+   }else{
+    let res = await fetch(`https://63984905fe03352a94cb30eb.mockapi.io/admin/${name}`)
+    let data = await  res.json()
+    value.innerHTML = `Hello ${data.username}!`
+   }
+
+}
+
+logout.addEventListener("click",()=>{
+  sessionStorage.setItem("loggedin-adminid",0)
+  adminName()
+})
+
+function alv(value){
+    totalPro.innerHTML = value
+}
+
